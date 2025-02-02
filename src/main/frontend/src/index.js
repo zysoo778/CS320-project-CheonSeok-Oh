@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './Components/App';
 import Page2 from './Components/Page2';
+import QuizList from './Components/QuizList';
+import QuizDetail from './Components/QuizDetail';
 import Navbar from "./Components/Navbar";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { Amplify } from 'aws-amplify';
@@ -17,6 +19,8 @@ root.render(
           <Routes>
               <Route path="/" element={<App/>}/>
               <Route path="/page2" element={<Page2/>}/>
+              <Route path="/quizzes" element={<QuizList/>}/>
+              <Route path="/quiz/:quizId" element={<QuizDetail/>}/>
           </Routes>
       </BrowserRouter>
   </React.StrictMode>
